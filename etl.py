@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 import datetime
 import pandas as pd
+import mysql.connector
 
 load_dotenv()
 
@@ -47,7 +48,34 @@ def transform_data(data):
 
     return pd.DataFrame(data_dict)
 
+def load_data(data, table):
+    try:
+        connection = mysql.connector.connect(
+            user=os.getenv('USER'),
+            password=os.getenv('PASSWORD'),
+            host=os.getenv('HOST'),
+            database=os.getenv('DATABASE'),
+            autocommit=True
+        )
+    except mysql.connector.Error as error:
+        print(error)
+
+    cursor = connection.cursor()
+
+    query = ""
+    for i, item in data.iterrows():
+        query += f"INSERT INTO {table} (songs, artists, time_played, dates) VALUES (\"{item['songs']}\", \"{item['artists']}\", \"{item['time_played']}\", \"{item['dates']}\");\n"
+
+    try:
+        cursor.execute(query)
+        print("Data Succesfully loaded to the Database")
+    except mysql.connector.Error as error:
+        print(error)
+        connection.rollback()
+    
+    connection.close()
+
 if __name__ == "__main__":
     data = extract_data(os.getenv('TOKEN'), 1)
     data = transform_data(data)
-    print(data)
+    load_data(data, os.getenv('TABLE_NAME'))
