@@ -3,7 +3,8 @@ import os
 from dotenv import load_dotenv
 import datetime
 import pandas as pd
-import mysql.connector
+# import mysql.connector
+from sqlalchemy import create_engine
 
 load_dotenv()
 
@@ -16,7 +17,7 @@ def extract_data(token, days):
 
     yesterday = int((datetime.datetime.now() - datetime.timedelta(days=days)).timestamp()) * 1000
     request = requests.get(f'https://api.spotify.com/v1/me/player/recently-played?before={yesterday}&limit=50', headers=headers)
-
+    
     return request.json()
 
 def transform_data(data):
@@ -48,34 +49,25 @@ def transform_data(data):
 
     return pd.DataFrame(data_dict)
 
-def load_data(data, table):
-    try:
-        connection = mysql.connector.connect(
-            user=os.getenv('USER'),
-            password=os.getenv('PASSWORD'),
-            host=os.getenv('HOST'),
-            database=os.getenv('DATABASE'),
-            autocommit=True
-        )
-    except mysql.connector.Error as error:
-        print(error)
+## deprecated, use airflow instead
+def load_data(data):
+    user = os.getenv('DB_USERNAME')
+    password = os.getenv('DB_PASSWORD')
+    host = os.getenv('DB_HOST')
+    port = os.getenv('DB_PORT')
+    db = os.getenv('DB_NAME')
+    table_name = os.getenv('TABLE_NAME')
 
-    cursor = connection.cursor()
+    engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
 
-    query = ""
-    for i, item in data.iterrows():
-        query += f"INSERT INTO {table} (songs, artists, time_played, dates) VALUES (\"{item['songs']}\", \"{item['artists']}\", \"{item['time_played']}\", \"{item['dates']}\");\n"
+    data.to_sql(name=table_name, con=engine, if_exists='append')
+##
 
-    try:
-        cursor.execute(query)
-        print("Data Succesfully loaded to the Database")
-    except mysql.connector.Error as error:
-        print(error)
-        connection.rollback()
-    
-    connection.close()
-
-if __name__ == "__main__":
+def etl():
     data = extract_data(os.getenv('TOKEN'), 1)
     data = transform_data(data)
-    load_data(data, os.getenv('TABLE_NAME'))
+    return data
+
+if __name__ == "__main__":
+    data = etl()
+    load_data(data)

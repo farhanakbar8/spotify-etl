@@ -1,3 +1,5 @@
 .env
 *.ipynb
 *pycache*
+spotify_data/
+spotify-db
