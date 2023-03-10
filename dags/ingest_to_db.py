@@ -64,10 +64,10 @@ with DAG(
 
         engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
 
-        data.to_sql(name=table_name, con=engine, if_exists='append')
+        data.to_sql(name=table_name, con=engine, if_exists='replace')
     
     def etl():
-        token = 'BQDqmmj2WOW1sOguRovTpbvZX-LTrQdef6NDMWYa2DwjIOJG4dPu41sZ6jCcPuIFC41mLdsY7ffCoKd5kDUzOZQVKAXPDDH1hsTAotREyLhS6AlACWraIuLr_Yi4Y0xweVCLp-74htyt-YWRYCEnICPuPrDlAW2SnPBIp66MiY3xcyb-XubSjaEf'
+        token = 'BQDPeAT4txrCVkCae6bNv2NKmb711LG8arvWV9H9eQd8QN581Ci7WVrYyO-H3RrkFT738C1Zm2N3-mwpMfgQNsD1HxK7NJtu9FLOBhzPOgHq9FM_OXohdonMgXQWYcNJxfTI79Vg73iest62wnTHLuDcHnTDnwDsH2Rl-zf9SNxxASkOqIICQpiy'
         data = extract_data(token, 1)
         data = transform_data(data)
         load_data(data)
