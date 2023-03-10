@@ -121,3 +121,52 @@
 [2023-03-10T09:05:11.452+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:05:11.451+0000] {dag.py:2690} INFO - Sync 1 DAGs
 [2023-03-10T09:05:11.490+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:05:11.490+0000] {dag.py:3441} INFO - Setting next_dagrun for ingest_to_db to None, run_after=None
 [2023-03-10T09:05:11.518+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingest_to_db.py took 0.538 seconds
+[2023-03-10T09:05:41.565+0000] {processor.py:153} INFO - Started process (PID=705) to work on /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:05:41.566+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingest_to_db.py for tasks to queue
+[2023-03-10T09:05:41.567+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:05:41.567+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:05:41.952+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ingest_to_db']) retrieved from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:05:41.991+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:05:41.991+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-10T09:05:42.032+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:05:42.032+0000] {dag.py:3441} INFO - Setting next_dagrun for ingest_to_db to None, run_after=None
+[2023-03-10T09:05:42.064+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingest_to_db.py took 0.506 seconds
+[2023-03-10T09:06:12.265+0000] {processor.py:153} INFO - Started process (PID=735) to work on /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:06:12.268+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingest_to_db.py for tasks to queue
+[2023-03-10T09:06:12.269+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:06:12.269+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:06:12.665+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ingest_to_db']) retrieved from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:06:12.703+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:06:12.703+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-10T09:06:12.741+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:06:12.741+0000] {dag.py:3441} INFO - Setting next_dagrun for ingest_to_db to None, run_after=None
+[2023-03-10T09:06:12.772+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingest_to_db.py took 0.515 seconds
+[2023-03-10T09:06:43.014+0000] {processor.py:153} INFO - Started process (PID=778) to work on /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:06:43.016+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingest_to_db.py for tasks to queue
+[2023-03-10T09:06:43.018+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:06:43.017+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:06:43.572+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ingest_to_db']) retrieved from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:06:43.620+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:06:43.619+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-10T09:06:43.674+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:06:43.674+0000] {dag.py:3441} INFO - Setting next_dagrun for ingest_to_db to None, run_after=None
+[2023-03-10T09:06:43.715+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingest_to_db.py took 0.708 seconds
+[2023-03-10T09:07:13.908+0000] {processor.py:153} INFO - Started process (PID=808) to work on /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:07:13.912+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingest_to_db.py for tasks to queue
+[2023-03-10T09:07:13.913+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:07:13.913+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:07:14.291+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ingest_to_db']) retrieved from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:07:14.328+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:07:14.328+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-10T09:07:14.369+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:07:14.368+0000] {dag.py:3441} INFO - Setting next_dagrun for ingest_to_db to None, run_after=None
+[2023-03-10T09:07:14.625+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingest_to_db.py took 0.723 seconds
+[2023-03-10T09:07:44.729+0000] {processor.py:153} INFO - Started process (PID=838) to work on /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:07:44.730+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingest_to_db.py for tasks to queue
+[2023-03-10T09:07:44.731+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:07:44.731+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:07:45.128+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ingest_to_db']) retrieved from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:07:45.165+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:07:45.164+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-10T09:07:45.420+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:07:45.419+0000] {dag.py:3441} INFO - Setting next_dagrun for ingest_to_db to None, run_after=None
+[2023-03-10T09:07:45.445+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingest_to_db.py took 0.722 seconds
+[2023-03-10T09:08:15.641+0000] {processor.py:153} INFO - Started process (PID=868) to work on /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:08:15.644+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingest_to_db.py for tasks to queue
+[2023-03-10T09:08:15.645+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:08:15.645+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:08:16.017+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ingest_to_db']) retrieved from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:08:16.058+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:08:16.057+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-10T09:08:16.097+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:08:16.097+0000] {dag.py:3441} INFO - Setting next_dagrun for ingest_to_db to None, run_after=None
+[2023-03-10T09:08:16.125+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingest_to_db.py took 0.490 seconds
+[2023-03-10T09:08:46.303+0000] {processor.py:153} INFO - Started process (PID=907) to work on /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:08:46.305+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/ingest_to_db.py for tasks to queue
+[2023-03-10T09:08:46.307+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:08:46.306+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:08:46.854+0000] {processor.py:753} INFO - DAG(s) dict_keys(['ingest_to_db']) retrieved from /opt/airflow/dags/ingest_to_db.py
+[2023-03-10T09:08:46.906+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:08:46.905+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-10T09:08:46.965+0000] {logging_mixin.py:137} INFO - [2023-03-10T09:08:46.965+0000] {dag.py:3441} INFO - Setting next_dagrun for ingest_to_db to None, run_after=None
+[2023-03-10T09:08:47.011+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/ingest_to_db.py took 0.718 seconds

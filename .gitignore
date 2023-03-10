@@ -3,3 +3,5 @@
 *pycache*
 spotify_data/
 spotify-db
+logs/
+plugins/
