@@ -1,5 +1,5 @@
 # spotify-etl
-Gather recently played songs from Spotify API
+Gather recently played songs from [Spotify API](https://developer.spotify.com/console/get-recently-played/)
 
 # Technology Used
 * Python
